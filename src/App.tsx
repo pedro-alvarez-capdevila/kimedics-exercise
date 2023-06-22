@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter  as Router, Routes, Route} from 'react-router-dom' 
+import { SideBar } from './components/SideBar/SideBar';
+import { Dashboard } from './screens/Dashboard/Dashboard';
+import { useStyles } from './styles';
 
 function App() {
+  const {classes} = useStyles()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.container}>
+      <Router>
+        <SideBar>
+          <Routes>
+            <Route path='/' element={<Dashboard />} />
+            <Route path='/providers' element={<div>providers</div>} />
+            <Route path='/practices' element={<div>practices</div>} />
+            <Route path='/jobs' element={<div>jobs</div>} />
+          </Routes>
+        </SideBar>
+      </Router>
     </div>
   );
 }

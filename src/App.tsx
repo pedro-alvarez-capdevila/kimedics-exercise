@@ -7,18 +7,16 @@ import { useStyles } from './styles';
 function App() {
   const {classes} = useStyles()
   return (
-    <div className={classes.container}>
-      <Router>
-        <SideBar>
-          <Routes>
-            <Route path='/' element={<Dashboard />} />
-            <Route path='/providers' element={<div>providers</div>} />
-            <Route path='/practices' element={<div>practices</div>} />
-            <Route path='/jobs' element={<div>jobs</div>} />
-          </Routes>
-        </SideBar>
-      </Router>
-    </div>
+    <Router>
+      <SideBar>
+        <Routes>
+          <Route path='/' element={<Dashboard />} />
+          <Route path='/providers' element={<div>providers</div>} />
+          <Route path='/practices' element={<div>practices</div>} />
+          <Route path='/jobs' element={<div>jobs</div>} />
+        </Routes>
+      </SideBar>
+    </Router>
   );
 }
 

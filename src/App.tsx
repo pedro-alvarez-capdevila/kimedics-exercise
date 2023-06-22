@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter  as Router, Routes, Route} from 'react-router-dom' 
 import { SideBar } from './components/SideBar/SideBar';
 import { Dashboard } from './screens/Dashboard/Dashboard';
-import { Practices } from './screens/Practices/Practices';
+import Practices from './screens/Practices/Practices';
 
 function App() {
   return (

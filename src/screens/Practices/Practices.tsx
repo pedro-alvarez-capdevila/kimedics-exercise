@@ -1,16 +1,29 @@
+import { TextInput } from "@mantine/core";
+import { observer } from "mobx-react-lite";
+import { Search } from "react-feather";
+import usePracticesPresenter from "../../presenters/PracticesPresenter/usePracticesPresenter";
 import { PracticeListItem } from "./Components/PracticeListItem";
-import { items } from "./items";
 import { useStyles } from "./styles";
 
-export const Practices = () => {
+const Practices = () => {
+  const presenter = usePracticesPresenter();
   const { classes } = useStyles();
+
   return (
     <div className={classes.container}>
+      <TextInput 
+        value={presenter.searchQuery} 
+        onChange={event => presenter.changeSearchQuery( event.currentTarget.value )}
+        className={classes.searchBar}
+        icon={<Search size={15}/>}
+      />
       <div className={classes.itemsContainer}>
-        {items.map((item,index)=>(
+        {presenter.practiceItemsToShow.map((item,index)=>(
           <PracticeListItem key={`practicesItem-${index}`} totalBeds={item.totalBeds} name={item.name} />
         ))}
       </div>
     </div>
   );
 };
+
+export default observer( Practices )

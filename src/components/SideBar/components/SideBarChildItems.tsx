@@ -14,7 +14,6 @@ export const SideBarChildItems = ({
     item.children.map((child: MenuItem, childIndex: number) => (
       <SideBarChildLink 
         key={`${child.name}-${childIndex}`}
-        onClick={() => setIsOpen(child.sideBarIsOpened)}
         isOpen={isOpen}
         item={child}
       /> 

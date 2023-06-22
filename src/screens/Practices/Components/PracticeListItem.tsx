@@ -7,7 +7,7 @@ export const PracticeListItem = ({totalBeds, name}:{totalBeds: number, name: str
     <div className={classes.itemContainer}>
       <Checkbox color="cyan" classNames={{input: classes.checkboxInput}} />
       <div className={classes.nameText}>{name}</div>
-      <div>({totalBeds})</div>
+      <div className={classes.totalBedsText}>({totalBeds})</div>
     </div>
   );
 };

@@ -20,11 +20,11 @@ export const SideBarItems = ({
     {menuItems?.map((item, index) => {
         const onClickLinkItem = () => {
           toggleItemWithChildren(-1);
-          setIsOpen(item.sideBarIsOpened)
+          setIsOpen(false)
         }
         const onClickItem = () => {
           toggleItemWithChildren(index);
-          setIsOpen(item.sideBarIsOpened)
+          setIsOpen(true)
         }
         return (
           <React.Fragment key={index}>

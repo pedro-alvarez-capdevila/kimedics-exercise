@@ -7,7 +7,7 @@ export const SideBarTitle = ({isOpen}: {isOpen: boolean}) => {
   return (
     <div className={classes.logoContainer}>
       {isOpen 
-        ? <h1 className="logo">Logo</h1>
+        ? <h1>Kimedics</h1>
         : <Activity />
       }
     </div>

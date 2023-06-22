@@ -27,7 +27,11 @@ export const useStyles = createStyles(() => ({
   },
   nameText: {
     marginLeft: '10px',
-    marginRight: '10px'
+    marginRight: '10px',
+    width: '320px'
+  },
+  totalBedsText: {
+    color: "green"
   },
   searchBar: {
     width: '400px',

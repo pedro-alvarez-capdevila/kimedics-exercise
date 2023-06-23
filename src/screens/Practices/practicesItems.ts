@@ -1,14 +1,10 @@
-interface PracticesItem {
-  id: number,
-  name: string,
-  totalBeds: number
-}
+import { PracticeSerialization } from "../../entities/practice"
 
-export const practicesItems: PracticesItem[] = [
-  {
-    "id": 9248,
-    "name": "St Mary's Medical Center (Acute Care Hospitals)",
-    "totalBeds": 460
+export const practicesItems: PracticeSerialization[] = [
+     {
+        "id": 9248,
+        "name": "St Mary's Medical Center (Acute Care Hospitals)",
+        "totalBeds": 460
     },
     {
         "id": 5837,

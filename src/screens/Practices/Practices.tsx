@@ -1,5 +1,6 @@
 import { TextInput } from "@mantine/core";
 import { observer } from "mobx-react-lite";
+import { useEffect } from "react";
 import { Search } from "react-feather";
 import usePracticesPresenter from "../../presenters/PracticesPresenter/usePracticesPresenter";
 import { PracticeListItem } from "./Components/PracticeListItem";
@@ -8,6 +9,10 @@ import { useStyles } from "./styles";
 const Practices = () => {
   const presenter = usePracticesPresenter();
   const { classes } = useStyles();
+
+  useEffect(()=>{
+    presenter.fetchPractices()
+  }, [])
 
   return (
     <div className={classes.container}>
